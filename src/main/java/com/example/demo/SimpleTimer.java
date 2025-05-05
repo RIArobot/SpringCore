@@ -6,9 +6,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Component;
 
-@Component
-public class SimpleTimer {
 
+public class SimpleTimer {
 
     private long startTime;
 
@@ -22,13 +21,4 @@ public class SimpleTimer {
         System.out.println("Timer stopped. Duration: " + duration + " ms");
     }
 
-    @PostConstruct
-    public void init() {
-        System.out.println("Таймер создан!");
-    }
-
-    @PreDestroy
-    public void cleanup() {
-        System.out.println("Таймер уничтожен!");
-    }
 }

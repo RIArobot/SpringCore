@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 //@Scope("prototype")
 //@Lazy
 public class ScopeBean {
@@ -21,12 +21,12 @@ public class ScopeBean {
         this.data = data;
     }
 
-    @PostConstruct
+    //@PostConstruct
     public void init() {
         System.out.println("Scope бин создан!");
     }
 
-    @PreDestroy
+    //@PreDestroy
     public void cleanup() {
         System.out.println("Scope бин уничтожен!");
     }
