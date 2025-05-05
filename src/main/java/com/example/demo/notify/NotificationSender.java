@@ -8,18 +8,18 @@ public class NotificationSender {
     private NotificationService service;
 
     // Автоматическое внедрение через конструктор
-    @Autowired
-    public NotificationSender(NotificationService service) {
-        this.service = service;
-    }
+//    @Autowired
+//    public NotificationSender(EmailService service) {
+//        this.service = service;
+//    }
 
     public void notifyUser(String message) {
         service.send(message);
     }
 
     // Внедрение через сеттер
-/*    @Autowired
+    @Autowired
     public void setSmsService(SmsService smsService) {
         this.service = smsService;
-    }*/
+    }
 }
