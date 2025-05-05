@@ -12,6 +12,12 @@ public class DemoSpringCore {
 
         ApplicationContext ctx = SpringApplication.run(DemoSpringCore.class, args);
 
+        AppProperties properties = ctx.getBean(AppProperties.class);
+        System.out.println(properties.getName());
+        System.out.println(properties.getVersion());
+
+
+
     }
 
 }
